@@ -1,103 +1,76 @@
-/* Main styles */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
-
-.text {
-  fill: none;
-  stroke-width: 6;
-  stroke-linejoin: round;
-  stroke-dasharray: 70 330;
-  stroke-dashoffset: 0;
-  -webkit-animation: stroke 6s infinite linear;
-  animation: stroke 6s infinite linear;
+html,
+body{
+  font-family: 'Raleway', sans-serif;
+  color: #f3f3f3;
 }
 
-.text:nth-child(5n + 1) {
-  stroke: #F2385A;
-  -webkit-animation-delay: -1.2s;
-  animation-delay: -1.2s;
-}
-.text:nth-child(5n + 2) {
-  stroke: #F5A503;
-  -webkit-animation-delay: -2.4s;
-  animation-delay: -2.4s;
+.muted{
+  opacity: 0.6;
 }
 
-.text:nth-child(5n + 3) {
-  stroke: #E9F1DF;
-  -webkit-animation-delay: -3.6s;
-  animation-delay: -3.6s;
+.golden{
+  color: #FADA5E;
 }
 
-.text:nth-child(5n + 4) {
-  stroke: #56D9CD;
-  -webkit-animation-delay: -4.8s;
-  animation-delay: -4.8s;
+/*All the CSS for the "Intro" section*/
+#intro{
+  width: 100vw;
+  height: 100vh;
+
+  display: table;
+
+  background-color: #262324;
 }
 
-.text:nth-child(5n + 5) {
-  stroke: #3AA1BF;
-  -webkit-animation-delay: -6s;
-  animation-delay: -6s;
+.intro-container{
+  position: relative;
+  margin-top: 35vh;
+  margin-left: 5vw;
 }
 
-@-webkit-keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
+.intro-container h1{
+  font-size: 10vh;
+  line-height: 80%;
+  text-decoration: none;
 }
 
-@keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
+.intro-container h4{
+  line-height: 30%;
 }
 
-/* Other styles */
-html, body {
-  height: 100%;
+.intro-container hr{
+  margin: auto;
 }
 
-body {
-  background: #111;
-  background-size: .2em 100%;
-  font: 14.5em/1 Open Sans, Impact;
-  margin: 0;
-  text-transform: uppercase;
+.intro-container a{
+  color: #f3f3f3;
 }
 
-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+/*All the CSS for the "About" section*/
+#about{
+  width: 100vw;
+  height: auto;
+  padding-bottom: 10vh;
+
+  background-color: #155984;
 }
 
-.btn {
-    margin-top: 57vh;
-    opacity: 1;
-    padding: 2vh 2vw;
-    font-size: 2.5vh;
-    font-family: sans-serif;
-    border-radius: 1vh;
-    border-color: white;
-    background: transparent;
-    color: #F9F9F9;
-
-    -webkit-transition: background .3s ease;
-       -moz-transition: background .3s ease;
-        -ms-transition: background .3s ease;
-         -o-transition: background .3s ease;
-            transition: background .3s ease;
-    /*-webkit-animation: buttonAppear 2.5s linear 1 forwards alternate;
-    animation: buttonAppear 2.5s linear 1 forwards alternate;*/
+.about-container{
+  margin-left: 5vw;
+  padding-top: 3vh;
 }
 
-.btn:hover {
-    background-color: #F9F9F9;
-    color: #000000;
+.about-container h2{
+  font-size: 7vh;
+}
 
-    -webkit-transition: background .5s ease;
-       -moz-transition: background .5s ease;
-        -ms-transition: background .5s ease;
-         -o-transition: background .5s ease;
-            transition: background .5s ease;
+.about-container p{
+  font-size: 3vh;
+  line-height: 110%;
+}
+
+/*All the CSS for the "Projects" section*/
+.project-container{
+  width: 100vw;
+  height: 100vh;
 }
