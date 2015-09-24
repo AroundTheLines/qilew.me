@@ -180,6 +180,10 @@ body{
   background-color: #0F3358;
 }
 
+#gtahackathons .carousel-indicators li{
+  background-color: #0F3358;
+}
+
 /*Mr.Tutor GTA CSS*/
 #mrtutorgta{
   color: #262324;
@@ -216,10 +220,11 @@ body{
   border-color: white;
 }
 
-/*Container for all social elements*/
+/*Container for all social elements
+------------------------------------------------*/
 .outro-container{
   position: relative;
-  height: 100vh;
+  height: 94vh;
 }
 
 .outro-container .blog{
@@ -236,13 +241,15 @@ body{
 .outro-container .blog a{
   color: #262324;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .outro-container .vertically-challenged{
   position: relative;
   top: 50%;
   text-align: center;
-  transform: translateY(-50%);  
+  transform: translateY(-50%);
+  z-index: 10 !important;  
 }
 
 .outro-container .resume{
@@ -256,6 +263,7 @@ body{
 .outro-container .resume a{
   color: white;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 /*Footer CSS*/
@@ -273,16 +281,12 @@ footer .container{
 }
 
 /* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
+---------------------------------------------------------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
   height: 450px;
   margin-bottom: 60px;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
@@ -296,6 +300,11 @@ footer .container{
   left: 0;
   min-width: 100%;
   height: 450px;
+}
+
+.carousel-control{
+  width: 50%;
+  background-image: none;
 }
 
 /*Laptop CSS
@@ -335,7 +344,7 @@ footer .container{
   border: 12px solid #e8ebf0;
   border-radius: 10px 10px 0 0;
   position: absolute;
-  bottom: 22%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -394,4 +403,79 @@ footer .container{
   width: 450px;
   margin-left: -225px;
   bottom: -26px;
+}
+
+/* CSS Resume
+----------------------------------------------------*/
+.doc-icon {
+  background:#f9f9f9;
+  border:1px solid #ccc;
+  -moz-border-radius:3px 15px 3px 3px;
+  -webkit-border-radius:3px 15px 3px 3px;
+  border-radius:3px 30px 3px 3px;
+  -moz-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  -webkit-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  display:block;
+  width:173px;
+  height:235px;
+  position: absolute;
+  text-indent:-9999em;
+  margin:42px auto;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1 !important;
+}
+
+.doc-icon:before {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  width:25px;
+  height:25px;
+  background:#ccc;
+  background:-moz-linear-gradient(70deg, #fff 0,  #eee 50%, #ccc 100%);
+  background:-webkit-linear-gradient(45deg, #fff 0,  #eee 50%, #ccc 100%);
+  box-shadow:rgba(0,0,0,0.05) -1px 1px 1px, inset white 0 0 1px;
+  border-bottom:1px solid #ccc;
+  border-left:1px solid #ccc;
+  -moz-border-radius:0 30px 0 0;
+  -webkit-border-radius:0 30px 0 0;
+  border-radius:0 30px 0 0;
+}
+
+.doc-line-1{
+  position: absolute;
+  width: 120px;
+  height: 10px;
+  background: #ccc;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.doc-line-2{
+  position: absolute;
+  width: 120px;
+  height: 10px;
+  background: #ccc;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.doc-line-3{
+  position: absolute;
+  width: 120px;
+  height: 10px;
+  background: #ccc;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
 }
