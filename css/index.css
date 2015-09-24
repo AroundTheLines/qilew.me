@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 html,
 body{
   font-family: 'Raleway', sans-serif;
@@ -24,8 +28,8 @@ body{
 
 .intro-container{
   position: relative;
-  margin-top: 35vh;
-  margin-left: 5vw;
+  margin-top: 36vh;
+  margin-left: 2vw;
 }
 
 .intro-container h1{
@@ -46,31 +50,230 @@ body{
   color: #f3f3f3;
 }
 
-/*All the CSS for the "About" section*/
-#about{
-  width: 100vw;
-  height: auto;
-  padding-bottom: 10vh;
+.view-work {
+  position: relative;
+  float: right;
+  margin-right: 0.7vw;
+  margin-top: 0vh;
 
-  background-color: #155984;
-}
+  display: inline-block;
+  overflow: hidden;
+  width: 1.5em;
 
-.about-container{
-  margin-left: 5vw;
-  padding-top: 3vh;
-}
-
-.about-container h2{
-  font-size: 7vh;
-}
-
-.about-container p{
   font-size: 3vh;
-  line-height: 110%;
+
+  animation-name: bounce;
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.view-work:hover{
+  color: #FADA5E;
+}
+
+.view-work-inner{
+  display: inline-block;
+  white-space: nowrap;
+  /* this is for shity "non IE" browsers
+     that dosn't support writing-mode */
+  -webkit-transform: translate(1.1em,0) rotate(90deg);
+     -moz-transform: translate(1.1em,0) rotate(90deg);
+       -o-transform: translate(1.1em,0) rotate(90deg);
+          transform: translate(1.1em,0) rotate(90deg);
+  -webkit-transform-origin: 0 0;
+     -moz-transform-origin: 0 0;
+       -o-transform-origin: 0 0;
+          transform-origin: 0 0;
+ /* IE9+ */
+ -ms-transform: none;
+ -ms-transform-origin: none;
+ /* IE8+ */
+ -ms-writing-mode: tb-rl;
+ /* IE7 and below */
+ *writing-mode: tb-rl;
+}
+.view-work-inner:before{
+  content: "";
+  float: right;
+  margin-top: 100%;
+}
+@keyframes bounce {
+  from {margin-top: -25vh;}
+  to {margin-top: -19vh;}
 }
 
 /*All the CSS for the "Projects" section*/
 .project-container{
-  width: 100vw;
+  height: 700px;
+}
+
+.project-container > .container{
+}
+
+.project-container > .container > .row{
+  position: relative;
+  bottom: -219px;
+}
+
+.project-container > .container > .row > .col-md-3{
+  position: relative;
+  margin: auto;
+
+  text-align: right;
+}
+
+.project-container > .container > .row > .col-md-3 > hr{
+  margin: auto;
+  margin-top: -7px;
+}
+.project-container > .container > .row > .col-md-3 > h6{
+  margin: auto;
+  font-size: 2vh;
+  line-height: 130%;
+  font-weight: bold;
+}
+.project-container > .container > .row > .col-md-3 > h5{
+  font-size: 2.7vh;
+}
+.project-container > .container > .row > .col-md-3 > p{
+  font-size: 1.8vh;
+}
+
+.project-container .bar{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 1px;
+  background: #262324;
+  background-color: rgba(37,34,35,0.5);
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.project-container .gui{
+  margin: 0 10px;
+}
+
+.project-container .bar .gui .circle {
+  width: 8px;
+  height: 8px;
+  margin: 11px 3px;
+  float: left;
+  background: #262324;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/*GTAHackathons CSS*/
+#gtahackathons{
+  color: white;
+  background-color: #0F3358;
+}
+
+#gtahackathons .circle{
+  background-color: #0F3358;
+}
+
+/*Mr.Tutor GTA CSS*/
+#mrtutorgta{
+  color: #262324;
+  background-color: #D4AF37;
+}
+
+#mrtutorgta .circle{
+  background-color: #D4AF37;
+}
+
+#mrtutorgta hr{
+  border-color: #262326;
+}
+/*Culturefest CSS*/
+#culturefest{
+  color: white;
+  background-color: #015C5B;
+}
+
+#culturefest .circle{
+  background-color: #015C5B;
+}
+/*PillowCase CSS*/
+#pillow-case{
+  color: white;
+  background-color: #78a22f;
+}
+
+#pillow-case .circle{
+  background-color: #78a22f;
+}
+
+#pillow-case hr{
+  border-color: white;
+}
+
+/*Container for all social elements*/
+.outro-container{
+  position: relative;
   height: 100vh;
+}
+
+.outro-container .blog{
+  position: absolute;
+  left: 0;
+
+  margin: auto;
+  height: 100%;
+  background-color: #e6e6e6;
+
+  color: #262324;
+}
+
+.outro-container .blog a{
+  color: #262324;
+}
+
+.outro-container .vertically-challenged{
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);  
+}
+
+.outro-container .resume{
+  position: absolute;
+  right: 0;
+
+  height: 100%;
+  background-color: #504d50;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 450px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 450px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 450px;
 }
