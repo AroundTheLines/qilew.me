@@ -197,6 +197,11 @@ body{
 #mrtutorgta hr{
   border-color: #262326;
 }
+
+#mrtutorgta .carousel-indicators li{
+  background-color: #D4AF37;
+}
+
 /*Culturefest CSS*/
 #culturefest{
   color: white;
@@ -206,18 +211,27 @@ body{
 #culturefest .circle{
   background-color: #015C5B;
 }
+
+#culturefest .carousel-indicators li{
+  background-color: #015C5B;
+}
+
 /*PillowCase CSS*/
 #pillow-case{
   color: white;
-  background-color: #78a22f;
+  background-color: #78A22F;
 }
 
 #pillow-case .circle{
-  background-color: #78a22f;
+  background-color: #78A22F;
 }
 
 #pillow-case hr{
   border-color: white;
+}
+
+#pillow-case .carousel-indicators li{
+  background-color: #78A22F;
 }
 
 /*Container for all social elements
@@ -280,6 +294,17 @@ footer .container{
   transform: translateY(-50%);
 }
 
+footer span{
+  font-size: 3em;
+  font-weight: bold;
+}
+
+footer a,
+footer a:hover{
+  text-decoration: underline;
+  color: white;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 ---------------------------------------------------------------------------------------------------- */
 
@@ -300,11 +325,6 @@ footer .container{
   left: 0;
   min-width: 100%;
   height: 450px;
-}
-
-.carousel-control{
-  width: 50%;
-  background-image: none;
 }
 
 /*Laptop CSS
@@ -478,4 +498,27 @@ footer .container{
   left: 50%;
   transform: translateX(-50%);
   border-radius: 3px;
+}
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader{ 
+  display: none;  
+}
+
+.js #loader{ 
+  display: block;
+  position: absolute; 
+  left: 100px; 
+  top: 0; 
+}
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(img/load.gif) center no-repeat #fff;
 }
